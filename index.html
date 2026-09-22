@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Учебная страница начинающего техногика и обзорщика гаджетов.">
+    <title>Стулкова Марианна - техногик и обзорщик гаджетов</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Внутренний CSS: демонстрация размера и шрифта полей ввода */
+        input,
+        textarea {
+            min-height: 50px;
+            font-family: var(--font-main);
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
+
+    <header class="site-header container" id="about">
+        <nav class="site-nav" aria-label="Навигация по странице">
+            <a href="#about">Стулкова Марианна / технообзоры</a>
+            <a href="#skills">Навыки</a>
+            <a href="#projects">Проекты</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">О себе · техногик и обзорщик гаджетов</p>
+                <h1>Техногик <span>и обзорщик гаджетов</span></h1>
+                <p class="author">Стулкова Марианна</p>
+                <p class="lead">
+                    Тестирую смартфоны, ноутбуки и аксессуары, сравниваю
+                    характеристики и учусь объяснять сложные технологии простыми словами.
+                </p>
+                <div class="hero-links">
+                    <a
+                        class="external-link"
+                        href="https://github.com/RiRi8509"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Мой GitHub ↗</a>
+                </div>
+            </div>
+
+            <div class="portrait">
+                <img
+                    src="assets/avatar.jpg"
+                    alt="Портрет автора сайта - Стулковой Марианны"
+                    width="1206"
+                    height="943"
+                >
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="main-content">
+        <div class="knowledge-grid">
+            <section class="skills" id="skills">
+                <h2>Навыки</h2>
+                <p class="section-description">Что я развиваю во время тестирования техники:</p>
+                <ul class="skills-list">
+                    <li class="skill-card">Тестирование смартфонов и ноутбуков.</li>
+                    <li class="skill-card">Анализ технических характеристик.</li>
+                    <li class="skill-card">Сравнение устройств в одинаковых сценариях.</li>
+                    <li class="skill-card">Написание понятных и честных обзоров.</li>
+                    <li class="skill-card">Оценка производительности и нагрева.</li>
+                    <li class="skill-card">Анализ автономности в повседневной работе.</li>
+                    <li class="skill-card">Оценка качества дисплеев и камер.</li>
+                </ul>
+            </section>
+
+            <aside class="favorites" aria-labelledby="favorites-title">
+                <h2 id="favorites-title">Любимая техника</h2>
+                <dl>
+                    <dt>Ноутбуки</dt>
+                    <dd>Мой любимый бренд ноутбуков - Apple.</dd>
+
+                    <dt>Смартфоны</dt>
+                    <dd>Мой любимый бренд смартфонов - Apple.</dd>
+
+                    <dt>Беспроводные наушники</dt>
+                    <dd>Мой любимый бренд наушников - Marshall.</dd>
+                </dl>
+            </aside>
+        </div>
+
+        <section class="projects-section" id="projects">
+            <div class="section-heading">
+                <h2 style="text-align: center;">Проекты</h2>
+            </div>
+
+            <ol class="projects">
+                <li>
+                    <strong>Тестирование iPhone 18 pro</strong>
+                    <p>Проверить производительность, экран, камеры, автономность и удобство системы.</p>
+                </li>
+                <li>
+                    <strong>Обзор iPad</strong>
+                    <p>Оценить производительность, качество дисплея, автономность и удобство для учёбы.</p>
+                </li>
+                <li>
+                    <strong>Сравнение AirPods</strong>
+                    <p>Сопоставить звук, микрофон, шумоподавление, посадку и устойчивость соединения.</p>
+                </li>
+                <li>
+                    <strong>Тест Apple Watch</strong>
+                    <p>Изучить уведомления, спортивные функции, точность измерений и автономность.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="contact-copy">
+                <h2>Связаться со мной</h2>
+                <p class="lead">
+                    Заполните форму, указав свои контактные данные и сообщение.
+                </p>
+                <p class="form-note" id="form-note">
+                    После отправки я ознакомлюсь с вашим предложением и постараюсь
+                    учесть его при подготовке новых материалов.
+                </p>
+            </div>
+
+            <form class="contact-form" method="get" aria-describedby="form-note">
+                <label for="visitor-name">Имя</label>
+                <input
+                    type="text"
+                    id="visitor-name"
+                    name="name"
+                    placeholder="Как к вам обращаться?"
+                    autocomplete="name"
+                    required
+                >
+
+                <label for="visitor-email">Email</label>
+                <input
+                    type="email"
+                    id="visitor-email"
+                    name="email"
+                    placeholder="name@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="visitor-message">Сообщение</label>
+                <textarea
+                    id="visitor-message"
+                    name="message"
+                    rows="6"
+                    placeholder="Напишите, какой гаджет стоит протестировать"
+                    required
+                ></textarea>
+
+                <button type="submit">Отправить сообщение</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer container">
+        <p>© 2026 Стулкова Марианна.</p>
+        <p>Лабораторная работа №2 · Основы CSS</p>
+    </footer>
+</body>
+</html>

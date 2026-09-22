@@ -419,7 +419,8 @@ p {
     color: var(--text-muted);
 }
 
-.gadgets-section {
+.gadgets-section,
+.comparison-section {
     margin-bottom: 108px;
     scroll-margin-top: 24px;
 }
@@ -489,7 +490,8 @@ p {
     letter-spacing: 0.12em;
 }
 
-.gadget-card h3 {
+.gadget-card h3,
+.spec-card h3 {
     margin: 0 0 12px;
     color: var(--text-color);
     font-size: 1.16rem;
@@ -512,6 +514,66 @@ p {
 
 .gadget-feature strong {
     color: var(--primary-light);
+}
+
+/* CSS Grid: три колонки характеристик на большом экране */
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.spec-card {
+    position: relative;
+    min-width: 0;
+    padding: 30px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 100% 0, rgba(200, 206, 208, 0.16), transparent 45%),
+        linear-gradient(145deg, #2b3133, #14181a);
+    border: 1px solid #657073;
+    border-radius: var(--radius);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 16px 32px rgba(3, 8, 10, 0.28);
+}
+
+.spec-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    min-height: 30px;
+    margin-bottom: 24px;
+    padding: 4px 9px;
+    background: var(--primary-color);
+    color: var(--ink-color);
+    border-radius: calc(var(--radius) - 3px);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+}
+
+.spec-value {
+    display: block;
+    margin-top: 22px;
+    color: var(--primary-light);
+    font-size: clamp(2.7rem, 5vw, 4.5rem);
+    font-weight: 750;
+    font-variant-numeric: tabular-nums;
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+}
+
+.spec-unit {
+    margin-top: 12px;
+    color: var(--primary-color);
+    font-weight: 750;
+}
+
+.spec-description {
+    max-width: 35ch;
+    margin: 24px 0 0;
+    color: var(--text-muted);
+    line-height: 1.6;
 }
 
 .contact-section {

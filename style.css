@@ -713,14 +713,18 @@ button:focus {
     }
 }
 
-/* Планшет: Flex 2 карточки */
+/* Планшет: Flex 2 карточки, Grid 2 колонки */
 @media (max-width: 1199px) {
     .gadget-card {
         flex-basis: calc(50% - 10px);
     }
+
+    .spec-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
-/* Телефон: Flex 1 карточка */
+/* Телефон: Flex 1 карточка, Grid 1 колонка */
 @media (max-width: 767px) {
     .site-header {
         padding-bottom: 58px;
@@ -781,7 +785,8 @@ button:focus {
         margin-bottom: 72px;
     }
 
-    .gadgets-section {
+    .gadgets-section,
+    .comparison-section {
         margin-bottom: 72px;
     }
 
@@ -824,6 +829,10 @@ button:focus {
 
     .gadget-card img {
         height: 220px;
+    }
+
+    .spec-grid {
+        grid-template-columns: 1fr;
     }
 
     .site-footer {

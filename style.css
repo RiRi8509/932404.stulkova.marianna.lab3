@@ -30,6 +30,7 @@ html {
 body {
     min-width: 320px;
     margin: 0;
+    overflow-x: hidden;
     background:
         radial-gradient(circle at 84% 7%, rgba(200, 206, 208, 0.09), transparent 26rem),
         var(--background-color);
@@ -40,6 +41,7 @@ body {
 }
 
 img {
+    display: block;
     max-width: 100%;
 }
 
@@ -83,29 +85,59 @@ a {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 16px 30px;
     min-height: 72px;
     border-bottom: 1px solid var(--line-color);
 }
 
-.site-nav > a {
+.site-brand,
+.nav-list a {
     color: var(--text-muted);
     font-size: 0.9rem;
     font-weight: 650;
     text-decoration: none;
 }
 
-.site-nav > a:first-child {
-    margin-right: auto;
+.site-brand {
     color: var(--text-color);
     letter-spacing: 0.02em;
 }
 
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list a {
+    display: block;
+    padding: 8px 11px;
+    border: 1px solid transparent;
+    border-radius: calc(var(--radius) - 3px);
+    transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
 /* hover */
-.site-nav > a:hover,
+.site-brand:hover,
+.nav-list a:hover,
 .hero-links a:hover {
     color: var(--primary-light);
     border-color: var(--primary-light);
+}
+
+.nav-list a:hover {
+    background: var(--surface-raised);
+    transform: translateY(-2px);
+}
+
+.nav-list a:active {
+    transform: translateY(0);
 }
 
 /* visited */
@@ -387,6 +419,101 @@ p {
     color: var(--text-muted);
 }
 
+.gadgets-section {
+    margin-bottom: 108px;
+    scroll-margin-top: 24px;
+}
+
+.section-heading-wide {
+    max-width: 760px;
+}
+
+.section-label {
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* Flexbox: четыре карточки гаджетов на большом экране */
+.gadgets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gadget-card {
+    display: flex;
+    flex: 1 1 calc(25% - 15px);
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.07), transparent 34%),
+        linear-gradient(145deg, #303638, #14181a 72%);
+    border: 1px solid #657073;
+    border-top-color: var(--primary-color);
+    border-radius: var(--radius);
+    box-shadow: 0 16px 34px rgba(3, 8, 10, 0.3);
+    transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.gadget-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: 0 24px 46px rgba(3, 8, 10, 0.48);
+    transform: translateY(-5px);
+}
+
+.gadget-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #596366;
+}
+
+.gadget-card-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 22px 20px 24px;
+}
+
+.gadget-number {
+    margin-bottom: 18px;
+    color: var(--primary-color);
+    font-size: 0.78rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.12em;
+}
+
+.gadget-card h3 {
+    margin: 0 0 12px;
+    color: var(--text-color);
+    font-size: 1.16rem;
+    line-height: 1.25;
+}
+
+.gadget-card p {
+    color: var(--text-muted);
+    font-size: 0.94rem;
+    line-height: 1.6;
+}
+
+.gadget-feature {
+    min-height: 4.2rem;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--line-color);
+}
+
+.gadget-feature strong {
+    color: var(--primary-light);
+}
+
 .contact-section {
     display: grid;
     grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
@@ -524,19 +651,37 @@ button:focus {
     }
 }
 
-@media (max-width: 700px) {
+/* Планшет: Flex 2 карточки */
+@media (max-width: 1199px) {
+    .gadget-card {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+/* Телефон: Flex 1 карточка */
+@media (max-width: 767px) {
     .site-header {
         padding-bottom: 58px;
     }
 
     .site-nav {
-        align-items: flex-start;
-        gap: 10px 20px;
+        align-items: stretch;
+        gap: 12px;
         padding: 18px 0;
     }
 
-    .site-nav > a:first-child {
-        flex-basis: 100%;
+    .site-brand {
+        width: 100%;
+    }
+
+    .nav-list {
+        flex: 1 1 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-list a {
+        text-align: center;
     }
 
     .hero {
@@ -574,6 +719,10 @@ button:focus {
         margin-bottom: 72px;
     }
 
+    .gadgets-section {
+        margin-bottom: 72px;
+    }
+
     .skills,
     .favorites,
     .contact-copy,
@@ -602,6 +751,19 @@ button:focus {
         margin-bottom: 48px;
     }
 
+    .gadgets-container {
+        flex-direction: column;
+    }
+
+    .gadget-card {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .gadget-card img {
+        height: 220px;
+    }
+
     .site-footer {
         flex-direction: column;
         gap: 4px;
@@ -614,6 +776,8 @@ button:focus {
     }
 
     .skill-card,
+    .gadget-card,
+    .nav-list a,
     button {
         transition: none;
     }

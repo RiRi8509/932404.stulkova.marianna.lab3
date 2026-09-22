@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Учебная страница начинающего техногика и обзорщика гаджетов.">
+    <meta name="description" content="Адаптивное портфолио техногика и обзорщика гаджетов.">
     <title>Стулкова Марианна - техногик и обзорщик гаджетов</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -20,11 +20,14 @@
     <a class="skip-link" href="#main-content">Перейти к основному содержимому</a>
 
     <header class="site-header container" id="about">
-        <nav class="site-nav" aria-label="Навигация по странице">
-            <a href="#about">Стулкова Марианна / технообзоры</a>
-            <a href="#skills">Навыки</a>
-            <a href="#projects">Проекты</a>
-            <a href="#contact">Контакты</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+            <a class="site-brand" href="#about">Стулкова Марианна / технообзоры</a>
+            <ul class="nav-list">
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#gadgets">Гаджеты недели</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
         </nav>
 
         <div class="hero">
@@ -113,6 +116,75 @@
             </ol>
         </section>
 
+        <section class="gadgets-section" id="gadgets">
+            <div class="section-heading section-heading-wide">
+                <p class="section-label">Выбор недели</p>
+                <h2>Гаджеты недели</h2>
+            </div>
+
+            <div class="gadgets-container">
+                <article class="gadget-card">
+                    <img
+                        src="assets/iphone.svg"
+                        alt="Тёмный смартфон с тройной камерой"
+                        width="640"
+                        height="420"
+                    >
+                    <div class="gadget-card-content">
+                        <span class="gadget-number" aria-hidden="true">01</span>
+                        <h3>iPhone 18 Pro</h3>
+                        <p>Флагманский смартфон для проверки камеры, экрана и производительности.</p>
+                        <p class="gadget-feature">Главная проверка: <strong>камера и нагрев</strong></p>
+                    </div>
+                </article>
+
+                <article class="gadget-card">
+                    <img
+                        src="assets/ipad.svg"
+                        alt="Серебристый планшет с тёмным экраном"
+                        width="640"
+                        height="420"
+                    >
+                    <div class="gadget-card-content">
+                        <span class="gadget-number" aria-hidden="true">02</span>
+                        <h3>iPad Pro</h3>
+                        <p>Планшет для учёбы, заметок, творческих задач и просмотра контента.</p>
+                        <p class="gadget-feature">Главная проверка: <strong>экран и автономность</strong></p>
+                    </div>
+                </article>
+
+                <article class="gadget-card">
+                    <img
+                        src="assets/airpods.svg"
+                        alt="Чёрные полноразмерные наушники"
+                        width="640"
+                        height="420"
+                    >
+                    <div class="gadget-card-content">
+                        <span class="gadget-number" aria-hidden="true">03</span>
+                        <h3>AirPods Max</h3>
+                        <p>Полноразмерные наушники для сравнения звука, посадки и работы шумоподавления.</p>
+                        <p class="gadget-feature">Главная проверка: <strong>звук и ANC</strong></p>
+                    </div>
+                </article>
+
+                <article class="gadget-card">
+                    <img
+                        src="assets/watch.svg"
+                        alt="Умные часы с прямоугольным циферблатом"
+                        width="640"
+                        height="420"
+                    >
+                    <div class="gadget-card-content">
+                        <span class="gadget-number" aria-hidden="true">04</span>
+                        <h3>Apple Watch</h3>
+                        <p>Умные часы для теста точности измерений, спортивных функций и удобства уведомлений.</p>
+                        <p class="gadget-feature">Главная проверка: <strong>датчики и батарея</strong></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section class="contact-section" id="contact">
             <div class="contact-copy">
                 <h2>Связаться со мной</h2>
@@ -162,7 +234,7 @@
 
     <footer class="site-footer container">
         <p>© 2026 Стулкова Марианна.</p>
-        <p>Лабораторная работа №2 · Основы CSS</p>
+        <p>Лабораторная работа №3 · Flexbox и CSS Grid</p>
     </footer>
 </body>
 </html>

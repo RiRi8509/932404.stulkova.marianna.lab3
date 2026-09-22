@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2e3639"/>
+      <stop offset="1" stop-color="#090c0e"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#dce2e4"/>
+      <stop offset=".5" stop-color="#606a6e"/>
+      <stop offset="1" stop-color="#e8edef"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)"/>
+  <circle cx="320" cy="210" r="176" fill="none" stroke="#c8ced0" stroke-opacity=".07" stroke-width="50"/>
+  <path d="M206 208V163C206 89 255 52 320 52C385 52 434 89 434 163V208" fill="none" stroke="url(#metal)" stroke-width="22" stroke-linecap="round"/>
+  <rect x="164" y="174" width="118" height="174" rx="54" fill="#111719" stroke="#aeb7ba" stroke-width="8"/>
+  <rect x="358" y="174" width="118" height="174" rx="54" fill="#111719" stroke="#aeb7ba" stroke-width="8"/>
+  <rect x="184" y="196" width="78" height="130" rx="36" fill="#2c3437"/>
+  <rect x="378" y="196" width="78" height="130" rx="36" fill="#2c3437"/>
+  <path d="M199 223H247M393 223H441" stroke="#d8dddf" stroke-opacity=".32" stroke-width="3"/>
+</svg>
